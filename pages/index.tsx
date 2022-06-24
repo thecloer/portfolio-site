@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Animation from '../components/home/animation';
 import Hero from '../components/home/hero';
 import Layout from '../components/layout';
 
@@ -12,9 +13,9 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
+      <div className='flex md:flex-row flex-col items-center'>
         <Hero />
-        <div className='lg:max-w-lg lg:w-full md:w-1/2 w-5/6'></div>
+        <Animation />
       </div>
     </Layout>
   );
