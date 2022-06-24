@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import Footer from './footer';
 import Header from './header';
 
 interface LayoutPorps {
@@ -10,6 +11,7 @@ const Layout = ({ children }: LayoutPorps) => {
     <div className='bg-primary'>
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };
