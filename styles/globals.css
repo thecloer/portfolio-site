@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-primary {
-  @apply bg-white dark:bg-slate-800;
+html,
+body,
+#__next {
+  @apply h-full;
 }
 
 h1,

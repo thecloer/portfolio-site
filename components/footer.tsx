@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='text-gray-600 dark:text-white bg-gray-100 dark:bg-slate-600/20'>
         <div className='container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col'>
           <a className='flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:text-slate-200'>
-            <span className='ml-3 text-xl'>Seokgyu Choi</span>
+            <span className='ml-3 text-xl'>cloer</span>
           </a>
           <p className='text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4'>
             <a href='https://www.instagram.com/thecloer/' rel='noopener noreferrer author' className='text-gray-600 ml-1' target='_blank'>
