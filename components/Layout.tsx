@@ -7,7 +7,7 @@ interface LayoutPorps {
 
 const Layout = ({ children }: LayoutPorps) => {
   return (
-    <div>
+    <div className='bg-primary'>
       <Header />
       {children}
     </div>
