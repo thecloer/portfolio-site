@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import React from 'react';
 
-export default function DarkModeToggleButton() {
+const DarkModeToggleButton = () => {
   const { theme, setTheme } = useTheme();
   return (
     <button
@@ -24,4 +24,6 @@ export default function DarkModeToggleButton() {
       </svg>
     </button>
   );
-}
+};
+
+export default DarkModeToggleButton;
