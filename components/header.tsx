@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import DarkModeToggleButton from './darkModeToggleButton';
@@ -8,6 +9,7 @@ const Header = () => {
       <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
         <Link href='/'>
           <a className='flex title-font font-medium items-center text-gray-900 dark:text-slate-200 mb-4 md:mb-0'>
+            <Image src='/cloer-logo-512x512.png' layout='fixed' width='40' height='40' alt='cloer logo' />
             <span className='ml-3 text-xl'>cloer</span>
           </a>
         </Link>
