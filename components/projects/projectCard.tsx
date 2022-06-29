@@ -27,11 +27,11 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }) => {
         <div className='project-card__content-container'>
           <h2 className='text-lg text-indigo-500 dark:text-orange-400 font-medium mb-3'>{title}</h2>
           <p className='leading-relaxed text-base break-words'>{displayedDescription}</p>
-          <div className='flex items-start mt-2'>
+          <div className='flex items-start flex-wrap mt-2'>
             {tags.map((aTag) => (
-              <div className={'px-2 py-1 mr-2 text-xs rounded-md'} style={{ backgroundColor: colorTable[aTag.color as Tcolors] }} key={aTag.id}>
+              <span className={'px-2 py-1 mb-2 mr-2 text-black text-xs rounded-md'} style={{ backgroundColor: colorTable[aTag.color as Tcolors] }} key={aTag.id}>
                 {aTag.name}
-              </div>
+              </span>
             ))}
           </div>
         </div>
