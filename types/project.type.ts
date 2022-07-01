@@ -31,3 +31,16 @@ export interface IProject {
     blog: string | null;
   };
 }
+
+export const linkButtonTypes = {
+  github: 'github',
+  npm: 'npm',
+  blog: 'blog',
+} as const;
+export type TLinkButtonType = typeof linkButtonTypes[keyof typeof linkButtonTypes];
+
+export type TProjectCardLinkButtonSrc = { type: TLinkButtonType; url: string };
+
+export interface IProjectCardLinkButton {
+  src: TProjectCardLinkButtonSrc;
+}
