@@ -18,6 +18,7 @@ const Projects = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) 
         <h1 className='sm:text-3xl text-2xl font-medium mb-2 text-gray-900'>Projects: {projects.length}</h1>
         <div className='h-1 w-20 bg-indigo-500 dark:bg-orange-500 rounded'></div>
       </div>
+
       <div className='flex flex-wrap'>
         {projects.map((aProject) => (
           <ProjectCard key={aProject.id} project={aProject} />
@@ -27,11 +28,11 @@ const Projects = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) 
   );
 };
 
-export default Projects;
-
 export const getStaticProps = async () => {
   const projects = await getProjects();
   return {
     props: { projects },
   };
 };
+
+export default Projects;

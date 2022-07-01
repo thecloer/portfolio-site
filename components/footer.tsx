@@ -9,7 +9,7 @@ const Footer = () => {
             <span className='ml-3 text-xl'>cloer</span>
           </a>
           <p className='text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4'>
-            <a href='https://www.instagram.com/thecloer/' rel='noopener noreferrer author' className='text-gray-600 ml-1' target='_blank'>
+            <a className='text-gray-600 ml-1' href='https://www.instagram.com/thecloer/' target='_blank' rel='noopener noreferrer author'>
               @thecloer
             </a>
           </p>

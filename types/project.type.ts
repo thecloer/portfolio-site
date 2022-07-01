@@ -1,6 +1,6 @@
 import { NotionCover, NotionPropertyTag, NotionPropertyText, NotionPropertyTitle, NotionPropertyUrl, Tag } from './notion.type';
 
-export interface ProjectProperties {
+export interface IProjectProperties {
   name: NotionPropertyTitle;
   description: NotionPropertyText;
   tag: NotionPropertyTag;
@@ -9,15 +9,15 @@ export interface ProjectProperties {
   blog: NotionPropertyUrl;
 }
 
-export interface ProjectRaw {
+export interface IProjectRaw {
   id: string;
   created_time: string;
   last_edited_time: string;
   cover: NotionCover;
-  properties: ProjectProperties;
+  properties: IProjectProperties;
 }
 
-export interface Project {
+export interface IProject {
   id: string;
   created_time: string;
   last_edited_time: string;
