@@ -13,7 +13,6 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
     coverUrl,
     properties: { name: title, description, tag: tags, github: githubLink, npm: npmLink, blog: blogLink },
   } = project;
-  const displayedDescription = description.length > 58 ? description.slice(0, 58).concat('...') : description;
 
   const links: TProjectCardLinkButtonSrc[] = [];
   githubLink && links.push({ type: linkButtonTypes.github, url: githubLink });
@@ -30,9 +29,11 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
             <Image src={coverUrl} alt='cover image' layout='fill' objectFit='cover' objectPosition='center' quality={100} />
           )}
         </div>
-        <div className='project-card__content-container'>
-          <h2 className='text-lg text-indigo-500 dark:text-orange-300 font-medium mb-3'>{title}</h2>
-          <p className='leading-relaxed text-base break-words'>{displayedDescription}</p>
+        <div className='flex flex-col grow p-5'>
+          <div className='grow'>
+            <h2 className='text-lg text-indigo-500 dark:text-orange-300 font-medium mb-3'>{title}</h2>
+            <p className='leading-relaxed text-base break-words'>{description}</p>
+          </div>
           <div className='flex items-start flex-wrap mt-4'>
             {links.map((linkSrc, i) => (
               <ProjectCardLinkButton key={i} src={linkSrc} />

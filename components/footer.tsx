@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -5,9 +6,11 @@ const Footer = () => {
     <footer className='body-font'>
       <div className='text-gray-600 dark:text-white bg-gray-100 dark:bg-slate-600/20'>
         <div className='container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col'>
-          <a className='flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:text-slate-200'>
-            <span className='ml-3 text-xl'>cloer</span>
-          </a>
+          <Link href='/'>
+            <a className='flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:text-slate-200'>
+              <span className='ml-3 text-xl'>Seokgyu Choi</span>
+            </a>
+          </Link>
           <p className='text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4'>
             <a className='text-gray-600 ml-1' href='https://www.instagram.com/thecloer/' target='_blank' rel='noopener noreferrer author'>
               @thecloer
