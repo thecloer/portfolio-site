@@ -1,11 +1,11 @@
-import { InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Layout from '../components/layout';
 import ProjectCard from '../components/projects/projectCard';
 import { getProjects } from '../lib/notion';
 
-const Projects = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Projects: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ projects }) => {
   return (
     <Layout>
       <Head>
