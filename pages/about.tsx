@@ -1,9 +1,32 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import React from 'react';
 import Layout from '../components/layout';
-import { InferGetStaticPropsType } from 'next';
+import StackCard from '../components/stackCard';
+import Section from '../components/section';
+import { ICONS, TIconName } from '../lib/data';
+import { TIcon } from '../types/data.type';
 
 const About = () => {
+  const myTechStackNameList: TIconName[] = [
+    'Javascript',
+    'Typescript',
+    'Node JS',
+    'Express JS',
+    'Nest JS',
+    'React JS',
+    'Next JS',
+    'Tailwind CSS',
+    'TypeORM',
+    'MySQL',
+    'PostgreSQL',
+    'Mongoose',
+    'Mongo DB',
+    'Github',
+    'Docker',
+  ];
+  const myTechStackList = myTechStackNameList.map((myTechStackName) => ICONS.find(({ name: iconName }) => iconName === myTechStackName) as TIcon);
+
   return (
     <Layout>
       <Head>
@@ -12,16 +35,22 @@ const About = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <section className='flex flex-col w-full items-center'>
-        <div className='h-52 w-52 bg-green-500  mb-14'>TODO: IMAGE</div>
-        <h1 className='sm:text-3xl text-2xl font-medium mb-10'>Seokgye Choi</h1>
-        <p className='w-2/3 md:w-3/5 leading-relaxed'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&asp;s standard dummy text ever since the 1500s, when an
-          unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry&asp;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-      </section>
+      <article className='flex flex-col w-full items-center'>
+        <div className='w-52 h-52 md:w-72 md:h-72 relative rounded-md overflow-hidden mb-12'>
+          <Image alt='picture of me' src='/me.jpg' layout='fill' />
+        </div>
+        <h1 className='text-2xl sm:text-3xl font-medium mb-10'>Seokgye Choi</h1>
+
+        <p className='w-2/3 md:w-3/5 leading-relaxed text-lg'>Hi! I&apos;m Seokgyu Choi. I&apos;m in the last year of my bachelor in geoinformatics in University of Seoul.</p>
+
+        <Section title='Skills'>
+          <div className='flex flex-wrap mt-8 justify-center sm:justify-between '>
+            {myTechStackList.map((stack, i) => (
+              <StackCard stack={stack} key={i} />
+            ))}
+          </div>
+        </Section>
+      </article>
     </Layout>
   );
 };
