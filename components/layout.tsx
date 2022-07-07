@@ -2,11 +2,11 @@ import { FunctionComponent, ReactNode } from 'react';
 import Footer from './footer';
 import Header from './header';
 
-interface LayoutPorps {
+interface ILayoutPorps {
   children: ReactNode;
 }
 
-const Layout: FunctionComponent<LayoutPorps> = ({ children }) => {
+const Layout: FunctionComponent<ILayoutPorps> = ({ children }) => {
   return (
     <div className='bg-white dark:bg-slate-800 flex flex-col min-h-full'>
       <Header />

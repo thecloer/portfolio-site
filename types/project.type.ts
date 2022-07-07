@@ -1,23 +1,23 @@
 import { NotionCover, NotionPropertyTag, NotionPropertyText, NotionPropertyTitle, NotionPropertyUrl, Tag } from './notion.type';
 
-export interface IProjectProperties {
+export type TProjectProperties = {
   name: NotionPropertyTitle;
   description: NotionPropertyText;
   tag: NotionPropertyTag;
   github: NotionPropertyUrl;
   npm: NotionPropertyUrl;
   blog: NotionPropertyUrl;
-}
+};
 
-export interface IProjectRaw {
+export type TProjectRaw = {
   id: string;
   created_time: string;
   last_edited_time: string;
   cover: NotionCover;
-  properties: IProjectProperties;
-}
+  properties: TProjectProperties;
+};
 
-export interface IProject {
+export type TProject = {
   id: string;
   created_time: string;
   last_edited_time: string;
@@ -30,17 +30,13 @@ export interface IProject {
     npm: string | null;
     blog: string | null;
   };
-}
+};
 
 export const linkButtonTypes = {
   github: 'github',
   npm: 'npm',
   blog: 'blog',
 } as const;
-export type TLinkButtonType = typeof linkButtonTypes[keyof typeof linkButtonTypes];
+export type TLinkButtonType = keyof typeof linkButtonTypes;
 
 export type TProjectCardLinkButtonSrc = { type: TLinkButtonType; url: string };
-
-export interface IProjectCardLinkButton {
-  src: TProjectCardLinkButtonSrc;
-}

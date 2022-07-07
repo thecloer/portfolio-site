@@ -1,4 +1,4 @@
-import { IProject, IProjectRaw } from '../types/project.type';
+import { TProject, TProjectRaw } from '../types/project.type';
 
 const options = {
   method: 'POST',
@@ -16,7 +16,7 @@ const options = {
 
 export const getProjects = async () => {
   const response = await fetch(`https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID_PROJECTS}/query`, options);
-  const { results } = (await response.json()) as { results: IProjectRaw[] };
+  const { results } = (await response.json()) as { results: TProjectRaw[] };
 
   const projects = results.reduce((newProjects, aProject) => {
     const {
@@ -31,7 +31,7 @@ export const getProjects = async () => {
 
     const coverUrl = cover?.type === 'file' ? cover.file.url : cover?.external.url ?? null;
 
-    const project: IProject = {
+    const project: TProject = {
       id,
       created_time,
       last_edited_time,
@@ -46,7 +46,7 @@ export const getProjects = async () => {
       },
     };
     return [...newProjects, project];
-  }, [] as IProject[]);
+  }, [] as TProject[]);
 
   return projects;
 };

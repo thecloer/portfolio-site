@@ -1,13 +1,11 @@
 import React, { FC, ReactNode } from 'react';
-import { TIcon } from '../types/data.type';
-import StackCard from './stackCard';
 
-interface ISection {
+interface ISectionProps {
   title: string;
   children?: ReactNode;
 }
 
-const Section: FC<ISection> = ({ title, children }) => {
+const Section: FC<ISectionProps> = ({ title, children }) => {
   return (
     <section className='flex flex-col items-center w-2/3 md:w-4/5 mt-20'>
       <div className='flex w-full items-center justify-around'>

@@ -36,46 +36,11 @@ export const ICONS = [
   // SNS
   { name: 'Instagram', link: '' },
   { name: 'Linked In', link: '' },
+
+  // GIS
+  { name: 'QGIS', link: '/logo_qgis.png' },
+  { name: 'ArcGIS', link: '' },
 ] as const;
-
-// export const ICONS = new Map(
-//   Object.entries({
-//     // language
-//     Javascript: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-//     Typescript: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-//     HTML: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-//     CSS: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-//     Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-//     C: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
-//     'C#': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
-//     R: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg',
-
-//     // Runtime / Framework / library
-//     'Node JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-//     'Express JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-//     'Nest JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg',
-//     'React JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-//     'Next JS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
-//     'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
-
-//     // ORM & ODM
-//     TypeORM: 'https://raw.githubusercontent.com/typeorm/typeorm/master/resources/logo_big.png',
-//     Mongoose: '/logo_mongoose_small.png',
-
-//     // DB
-//     MySQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain.svg',
-//     'Mongo DB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg',
-//     PostgreSQL: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg',
-
-//     // DevOps
-//     Github: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-//     Docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg',
-
-//     // SNS
-//     Instagram: '',
-//     'Linked In': '',
-//   })
-// );
 
 export type TIconName = typeof ICONS[number]['name'];
 
@@ -83,58 +48,100 @@ export type TIconName = typeof ICONS[number]['name'];
 export const courses: TCourse[] = [
   {
     title: 'Spatial Information Programming I',
-    description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    description: 'Glossier echo park pug, olf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2016B',
+    credits: 3,
     grade: 'A+',
-    tags: [],
+    tags: ['C'],
   },
   {
     title: 'Spatial Information Programming II',
-    description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave  portland craft beer.',
+    semester: '2017A',
+    credits: 3,
     grade: 'A0',
-    tags: [],
+    tags: ['C#'],
   },
   {
-    title: 'Spatial Database',
-    description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
-    grade: 'A+',
+    title: 'Web Design',
+    description: 'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave  portland craft beer.',
+    semester: '2017B',
+    credits: 2,
+    grade: 'B0',
     tags: [],
   },
   {
     title: 'Non-Spatial Database Theory',
     description:
       'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2017B',
+    credits: 3,
     grade: 'A0',
-    tags: [],
+    tags: ['PostgreSQL', 'C#'],
   },
   {
     title: 'Computer Graphics',
     description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+      'Glossier echo park pug, chdiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2017B',
+    credits: 3,
     grade: 'A+',
-    tags: [],
+    tags: ['C'],
   },
   {
     title: 'Artificial Intelligence for Everyone',
     description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+      'Glossy sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2019 Summer',
+    credits: 3,
     grade: 'A+',
     tags: [],
   },
+
+  {
+    title: 'Spatial Database',
+    description:
+      'Glossier echo park pug, church-key sartorial biodiesel vexillonhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2020A',
+    credits: 3,
+    grade: 'A+',
+    tags: ['PostgreSQL', 'R'],
+  },
+
   {
     title: 'Advanced statistical Programming',
     description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+      'Glossier echo park pug, church-key sartorial biodiesel vexilologist pop-up snackwave ramps cornhole.l Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2021B',
+    credits: 3,
     grade: 'A+',
-    tags: [],
+    tags: ['Python'],
+  },
+  {
+    title: 'Spatial Analysis',
+    description:
+      'Glossier echo park pug, church-kelologist pop-up snackwave ramps cornhole.y sartorial biodiesel vexillolop snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2021B',
+    credits: 3,
+    grade: 'B+',
+    tags: ['R'],
+  },
+  {
+    title: 'Photogrammetry',
+    description:
+      'Glossier echo park pug, church-kelologist pop-up snackwave ramps cornhole.y sartorial biodiesel vexillolop snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2021B',
+    credits: 3,
+    grade: 'A0',
+    tags: ['Python'],
   },
   {
     title: 'Applications of Deep Learning in Geoinformatics',
     description:
-      'Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+      'Glossier echo park pug, church-kelologist pop-up snackwave ramps cornhole.y sartorial biodiesel vexillolop snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.',
+    semester: '2021B',
+    credits: 3,
     grade: 'A0',
-    tags: [],
+    tags: ['Python'],
   },
 ];

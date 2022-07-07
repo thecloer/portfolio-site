@@ -6,8 +6,13 @@ import StackCard from '../components/stackCard';
 import Section from '../components/section';
 import { ICONS, TIconName } from '../lib/data';
 import { TIcon } from '../types/data.type';
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 
-const About = () => {
+interface IAboutPageProps {
+  myTechStackList: TIcon[];
+}
+
+export const getStaticProps: GetStaticProps<IAboutPageProps> = () => {
   const myTechStackNameList: TIconName[] = [
     'Javascript',
     'Typescript',
@@ -27,6 +32,12 @@ const About = () => {
   ];
   const myTechStackList = myTechStackNameList.map((myTechStackName) => ICONS.find(({ name: iconName }) => iconName === myTechStackName) as TIcon);
 
+  return {
+    props: { myTechStackList },
+  };
+};
+
+const About: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ myTechStackList }) => {
   return (
     <Layout>
       <Head>
