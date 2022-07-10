@@ -1,7 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import CourseBlock from '../components/education/courseBlock';
+import CourseCard from '../components/education/courseCard';
 import Layout from '../components/layout';
 import { courses } from '../lib/data';
 import { TCourse } from '../types/data.type';
@@ -28,9 +28,11 @@ const Education: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ c
       <div className='mb-20'>
         <h1 className='sm:text-3xl text-2xl font-medium mb-2'>University of Seoul</h1>
         <div className='h-1 w-20 bg-indigo-500 dark:bg-orange-500 rounded'></div>
+      </div>
 
+      <section className='px-5 mx-auto'>
         <a
-          className='inline-flex items-baseline mt-10 '
+          className='inline-flex items-baseline mb-12'
           href='https://www.uos.ac.kr/en/academics/colleges/cuscience/geolnformatics/introduction.do?epTicket=LOG'
           target='_blank'
           rel='noopener noreferrer author'
@@ -44,15 +46,11 @@ const Education: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ c
             />
           </svg>
         </a>
-      </div>
 
-      <section className='text-gray-600 body-font overflow-hidden'>
-        <div className='container px-5 mx-auto'>
-          <div className='-my-8 divide-y-2 divide-gray-100'>
-            {courses.map((course, i) => (
-              <CourseBlock course={course} key={i} />
-            ))}
-          </div>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {courses.reverse().map((course, i) => (
+            <CourseCard course={course} key={i} />
+          ))}
         </div>
       </section>
     </Layout>

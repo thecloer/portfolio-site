@@ -30,7 +30,7 @@ const ProjectCard: FC<IProjectCardProps> = ({ project }) => {
       </div>
       <div className='flex flex-col grow p-5'>
         <div className='grow'>
-          <h2 className='text-lg text-indigo-500 dark:text-orange-300 font-medium mb-3'>{title}</h2>
+          <h2 className='text-lg text-indigo-500 dark:text-orange-400 font-medium mb-3'>{title}</h2>
           <p className='leading-relaxed text-base break-words'>{description}</p>
         </div>
         <div className='flex items-start flex-wrap mt-4'>

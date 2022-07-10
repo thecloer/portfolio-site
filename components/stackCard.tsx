@@ -10,8 +10,7 @@ const StackCard: FC<IStackCardProps> = ({ stack }) => {
   return (
     <div className='stack-card'>
       <Image alt={`${stack.name} logo`} src={stack.link} width='24' height='24' />
-
-      <span className='text-md grow flex justify-center text-black'>{stack.name}</span>
+      <span className='grow flex justify-center text-black'>{stack.name}</span>
     </div>
   );
 };

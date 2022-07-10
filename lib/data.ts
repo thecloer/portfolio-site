@@ -32,6 +32,9 @@ export const ICONS = [
   // DevOps
   { name: 'Github', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
   { name: 'Docker', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg' },
+  { name: 'AWS EC2', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
+  { name: 'Nginx', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg' },
+  { name: 'Apache', link: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg' },
 
   // SNS
   { name: 'Instagram', link: '' },

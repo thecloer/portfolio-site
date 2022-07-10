@@ -29,6 +29,8 @@ export const getStaticProps: GetStaticProps<IAboutPageProps> = () => {
     'Mongo DB',
     'Github',
     'Docker',
+    'AWS EC2',
+    'Nginx',
   ];
   const myTechStackList = myTechStackNameList.map((myTechStackName) => ICONS.find(({ name: iconName }) => iconName === myTechStackName) as TIcon);
 
@@ -55,12 +57,13 @@ const About: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ myTec
         <p className='w-2/3 md:w-3/5 leading-relaxed text-lg'>Hi! I&apos;m Seokgyu Choi. I&apos;m in the last year of my bachelor in geoinformatics in University of Seoul.</p>
 
         <Section title='Skills'>
-          <div className='flex flex-wrap mt-8 justify-center sm:justify-between '>
+          <div className='mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>
             {myTechStackList.map((stack, i) => (
               <StackCard stack={stack} key={i} />
             ))}
           </div>
         </Section>
+        <Section title='Experenced'></Section>
       </article>
     </Layout>
   );
