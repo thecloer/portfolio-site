@@ -11,7 +11,7 @@ const Hero = () => {
         I&apos;m a full-stack web developer who loves Javascript ecosystem.
         <br />
       </p>
-      <div className='mt-8 flex flex-col md:flex-row'>
+      <div className='mt-8 flex flex-col sm:flex-row'>
         <HeroButton text='About' />
         <HeroButton text='Education' />
         <HeroButton text='Projects' />
