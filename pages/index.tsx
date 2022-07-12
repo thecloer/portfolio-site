@@ -13,10 +13,10 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='flex flex-col md:flex-row'>
+      <article className='flex flex-col md:flex-row items-center'>
         <Hero />
         <Animation />
-      </div>
+      </article>
     </Layout>
   );
 };
