@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='flex md:flex-row flex-col items-center'>
+      <div className='flex flex-col md:flex-row'>
         <Hero />
         <Animation />
       </div>

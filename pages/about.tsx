@@ -7,6 +7,7 @@ import Section from '../components/section';
 import { ICONS, TIconName } from '../lib/data';
 import { TIcon } from '../types/data.type';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
+import AboutMe from '../components/about/aboutMe';
 
 interface IAboutPageProps {
   myTechStackList: TIcon[];
@@ -54,7 +55,7 @@ const About: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ myTec
         </div>
         <h1 className='text-2xl sm:text-3xl font-medium mb-10'>Seokgye Choi</h1>
 
-        <p className='w-2/3 md:w-3/5 leading-relaxed text-lg'>Hi! I&apos;m Seokgyu Choi. I&apos;m in the last year of my bachelor in geoinformatics in University of Seoul.</p>
+        <AboutMe />
 
         <Section title='Skills'>
           <div className='mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>

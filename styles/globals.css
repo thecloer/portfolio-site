@@ -28,7 +28,7 @@
 
 @layer components {
   .btn-bg {
-    @apply bg-indigo-300 dark:bg-orange-300 
+    @apply bg-indigo-300 dark:bg-orange-300
           text-slate-900  dark:text-slate-800;
   }
   .btn-bg-hover {
